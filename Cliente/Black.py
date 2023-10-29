@@ -1,5 +1,16 @@
 from Cliente.Cliente import Cliente
 
+from Tarjeta.Debito import Debito
+from Tarjeta.Credito import Credito
+from Cuenta.CAPesos import CAPesos
+from Cuenta.CADolares import CADolares
+from Cuenta.CCPesos import CCPesos
+from Cuenta.CCDolares import CCDolares
+from Cuenta.CuentaInversion import CuentaInversion
+from Cuenta.Chequera import Chequera
+from Transaccion.Transaccion import Transaccion
+from datetime import datetime
+
 
 class Black(Cliente):
 
