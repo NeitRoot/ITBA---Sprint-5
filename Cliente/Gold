@@ -1,5 +1,16 @@
 from Cliente.Cliente import Cliente
 
+from Tarjeta.Debito import Debito
+from Tarjeta.Credito import Credito
+from Cuenta.CAPesos import CAPesos
+from Cuenta.CADolares import CADolares
+from Cuenta.CCPesos import CCPesos
+from Cuenta.CCDolares import CCDolares
+from Cuenta.CuentaInversion import CuentaInversion
+from Cuenta.Chequera import Chequera
+from Transaccion.Transaccion import Transaccion
+from datetime import datetime
+
 
 class Gold(Cliente):
 
@@ -11,11 +22,16 @@ class Gold(Cliente):
         self.tarjetasCredito = []
         # Se usa para almacenar todas las tarjetas (débito o crédito) y además para asignar números de indentificación a las mismas
         self.tarjetas = []
-        self.transacciones = []
+        self.Transaccion = []
         self.productos = []
         self.cajaDeAhorroDisponiblePesos = 1
         self.cajaDeAhorroDisponibleDolares = 1
         self.tarjetasDeDebitoDisponibles = 1
-        self.cuentaInversionesDisponibles = 1
-        self.chequerasDisponibles = 1
+        self.CuentaInversionDisponibles = 1
+        self.ChequerasDisponibles = 1
         self.cuentasCorrientesDisponibles = 1
+
+    def getInfo(self):
+        print("Nombre: "+self.nombre+" "+self.apellido+"\n"
+              "DNI: "+str(self.dni)+"\n"
+              "Tipo de cliente: "+self.tipo_cliente)
