@@ -1,0 +1,21 @@
+from Cliente.Cliente import Cliente
+
+
+class Gold(Cliente):
+
+    def __init__(self, nombre, apellido, dni, codCliente):
+        super().__init__(nombre, apellido, dni, codCliente)
+        self.tipo_cliente = "Gold"
+        self.limiteCajero = 20000
+        # Múltiples tarjetas de crédito, almacenamos en una lista
+        self.tarjetasCredito = []
+        # Se usa para almacenar todas las tarjetas (débito o crédito) y además para asignar números de indentificación a las mismas
+        self.tarjetas = []
+        self.transacciones = []
+        self.productos = []
+        self.cajaDeAhorroDisponiblePesos = 1
+        self.cajaDeAhorroDisponibleDolares = 1
+        self.tarjetasDeDebitoDisponibles = 1
+        self.cuentaInversionesDisponibles = 1
+        self.chequerasDisponibles = 1
+        self.cuentasCorrientesDisponibles = 1
